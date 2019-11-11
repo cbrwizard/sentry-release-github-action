@@ -3,7 +3,7 @@ description: 'An action which creates a sentry release on a github release creat
 inputs:
   release:
     description: 'Name of a release. Usually a git tag'
-    required: true
+    required: false
 runs:
   using: 'node12'
   main: 'dist/index.js'
