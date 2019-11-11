@@ -1,13 +1,9 @@
-name: 'Wait'
-description: 'Wait a designated number of milliseconds'
+name: 'Sentry release'
+description: 'An action which creates a sentry release on a github release creation.'
 inputs:
-  milliseconds:  # id of input
-    description: 'number of milliseconds to wait'
+  release:
+    description: 'Name of a release. Usually a git tag'
     required: true
-    default: '1000'
-outputs:
-  time: # output will be available to future steps 
-    description: 'The message to output'
 runs:
   using: 'node12'
   main: 'dist/index.js'

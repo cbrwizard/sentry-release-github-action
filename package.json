@@ -1,7 +1,7 @@
 {
-  "name": "javascript-action",
+  "name": "sentry-release-github-action",
   "version": "1.0.0",
-  "description": "JavaScript Action Template",
+  "description": "An action which creates a sentry release on a github release creation.",
   "main": "index.js",
   "scripts": {
     "lint": "eslint index.js",
@@ -10,25 +10,35 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/actions/javascript-action.git"
+    "url": "git+https://github.com/cbrwizard/sentry-release-github-action.git"
   },
   "keywords": [
     "GitHub",
     "Actions",
-    "JavaScript"
+    "JavaScript",
+    "Sentry"
   ],
-  "author": "GitHub",
+  "author": "Fyodor Ivanischev",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/actions/javascript-action/issues"
+    "url": "https://github.com/cbrwizard/sentry-release-github-action/issues"
   },
-  "homepage": "https://github.com/actions/javascript-action#readme",
+  "homepage": "https://github.com/cbrwizard/sentry-release-github-action#readme",
   "dependencies": {
     "@actions/core": "^1.1.1"
   },
   "devDependencies": {
     "@zeit/ncc": "^0.20.5",
     "eslint": "^6.3.0",
-    "jest": "^24.9.0"
+    "eslint-config-prettier": "^6.5.0",
+    "eslint-plugin-jest": "^23.0.3",
+    "eslint-plugin-prettier": "^3.1.1",
+    "jest": "^24.9.0",
+    "prettier": "^1.19.1"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "semi": false,
+    "trailingComma": "es5"
   }
 }
