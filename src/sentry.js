@@ -10,6 +10,10 @@ async function createSentryRelease(release, repo) {
       console.error('no repo passed')
       return false
     }
+    console.log({
+      org: process.env.SENTRY_ORG,
+      project: process.env.SENTRY_PROJECT,
+    })
     const cli = new SentryCli()
 
     console.log(`Creating sentry release ${release}`)
