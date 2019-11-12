@@ -9,8 +9,10 @@ async function run() {
     }
 
     const sentryRelease = await createSentryRelease(
-      release,
-      process.env['SENTRY_PROJECT']
+      // release,
+      '2.3.15test',
+      // process.env['SENTRY_PROJECT']
+      'cbrwizard'
     )
     if (!sentryRelease) {
       core.setFailed('Sentry release creation failed')
