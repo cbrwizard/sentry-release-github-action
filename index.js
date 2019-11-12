@@ -10,7 +10,7 @@ async function run() {
 
     const sentryRelease = await createSentryRelease(
       release,
-      core.getInput('sentry_repo')
+      process.env['SENTRY_PROJECT']
     )
     if (!sentryRelease) {
       core.setFailed('Sentry release creation failed')
