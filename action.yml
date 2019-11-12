@@ -3,7 +3,16 @@ description: 'An action which creates a sentry release on a github release creat
 inputs:
   release:
     description: 'Name of a release. Usually a git tag'
-    required: false
+    required: true
+  sentry_repo:
+    description: 'The full repo name as defined in Sentry'
+    required: true
+  sentry_org:
+    description: 'The full organization name as defined in Sentry'
+    required: true
+  sentry_auth_token:
+    description: 'The authentication token to use for all communication with Sentry.'
+    required: true
 runs:
   using: 'node12'
   main: 'dist/index.js'
